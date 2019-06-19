@@ -1,0 +1,54 @@
+{
+	"scripts": {
+		"xo": "xo",
+		"jest": "jest src",
+		"jest:watch": "jest src --watch",
+		"jest:coverage": "jest src --coverage",
+		"test": "xo && jest src --coverage"
+	},
+	"devDependencies": {
+		"husky": "^1.3.1",
+		"jest": "^24.5.0",
+		"lint-staged": "^8.1.5",
+		"xo": "^0.24.0"
+	},
+	"xo": {
+		"prettier": true,
+		"rules": {
+			"promise/prefer-await-to-then": false
+		},
+		"overrides": [
+			{
+				"files": [
+					"**/*.test.js",
+					"**/__mocks__/**.*"
+				],
+				"envs": [
+					"jest",
+					"node"
+				]
+			}
+		]
+	},
+	"prettier": {
+		"singleQuote": true,
+		"semi": false,
+		"useTabs": true,
+		"bracketSpacing": true,
+		"tabWidth": 4
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"pre-push": "npm test"
+		}
+	},
+	"lint-staged": {
+		"*.{js,json,css,md}": [
+			"xo --fix",
+			"prettier --write",
+			"git add"
+		]
+	}
+}
+
