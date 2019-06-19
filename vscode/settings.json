@@ -1,0 +1,34 @@
+{
+    "telemetry.enableTelemetry": false,
+    "search.location": "panel",
+    "workbench.panel.defaultLocation": "right",
+    "window.zoomLevel": 0,
+    "files.eol": "\n",
+    "editor.lineNumbers": "relative",
+    "extensions.ignoreRecommendations": false,
+    "explorer.openEditors.visible": 0,
+    "workbench.colorTheme": "JetJet-Pastel",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "200",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 22,
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": false,
+    "editor.parameterHints.enabled": false,
+    "editor.insertSpaces": false,
+    "eslint.autoFixOnSave": true,
+    "eslint.run": "onSave",
+    "editor.formatOnSave": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "javascript.autoClosingTags": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "xo.enable": true,
+    "xo.format.enable": true,
+    "shifty.fontFamilies.favoriteFontFamilies": [
+        "Fira Code"
+    ],
+    "shifty.colorThemes.favoriteColorThemes": [
+        "JetJet-Pastel"
+    ]
+}
