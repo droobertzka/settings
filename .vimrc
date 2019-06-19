@@ -1,7 +1,12 @@
 " Sane VIM settings for Frontend Web Development
+set shell=/bin/sh
 
 " _PLUGINS_________________________________________
 call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/tpope/vim-surround'
+Plug 'vim-syntastic/syntastic'
+Plug 'Chiel92/vim-autoformat'
+Plug 'xojs/vim-xo'
 Plug 'haishanh/night-owl.vim'
 
 " __Unused Themes__________________________________
@@ -49,6 +54,15 @@ set laststatus=2
 set suffixesadd+=.js
 set ignorecase
 set smartcase
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_javascript_checkers = ['xo']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+autocmd BufReadPre,BufWritePre *.js Autoformat
 
 " _WHITESPACE_______________________________________
 set wrap
@@ -61,3 +75,4 @@ set noshiftround
 set listchars=tab:→\ ,eol:¬,nbsp:·,space:·,trail:·
 set list
 set showbreak=↪\  
+
