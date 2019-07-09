@@ -19,6 +19,12 @@
     "editor.insertSpaces": false,
     "eslint.autoFixOnSave": true,
     "eslint.run": "onSave",
+    "eslint.options": {
+        "rules": {
+            "no-debugger": "off",
+            "capitalized-comments": "off"
+        }
+    },
     "editor.formatOnSave": true,
     "editor.acceptSuggestionOnCommitCharacter": false,
     "javascript.autoClosingTags": true,
